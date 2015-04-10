@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%=title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <a href="/register">add user(register)</a>
+    <h1><%= title %></h1>
+
+    <ul>
+        <% for(var i=0,l=users.length;i<l;i++){ %>
+            <li>
+                <%=users[i].name %>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html>
