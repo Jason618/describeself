@@ -3,9 +3,11 @@ var router = express.Router();
 var Users = require('../models/users');
 /* GET users listing. */
 router.post('/api/register', function (req, res, next) {
-    var name = req.body.name;
+    var email = req.body.email;
+    var password = req.body.password;
     var user = {
-        name: name
+        email: email,
+        password: password
     };
     console.log('input user:' + user);
     Users.addUser(user, function (result) {
@@ -14,5 +16,19 @@ router.post('/api/register', function (req, res, next) {
     });
 
 });
+
+router.post('/api/delete', function (req, res, next) {
+    var email = req.body.email;
+    var user = {
+        email: email
+    };
+    console.log('delete user email:' + user);
+    Users.deleteUserByEmail(user, function (result) {
+        console.log('register result:' + result);
+        res.redirect('/');
+    });
+
+});
+
 
 module.exports = router;

@@ -11,21 +11,17 @@
 <body>
     <h1><%= title %></h1>
 
-    <form action="/api/register" method="post">
+    <form action="/api/delete" method="post">
         <fieldset>
             <label>Email:</label>
             <input autocomplete="off" type="text" name="email">
         </fieldset>
-        <fieldset>
-            <label>Password:</label>
-            <input autocomplete="off" type="password" name="password">
-        </fieldset>
+
         <fieldset>
             <input type="submit" value="Submit">
         </fieldset>
     </form>
 
-    <a href="deleteUser">delete user</a>
 </body>
 
 </html>
