@@ -1,8 +1,178 @@
+/***********************reset****************************/
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
 }
 
 a {
-  color: #00B7FF;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/***********************global****************************/
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.container{
+    max-width: 966px;
+    margin: 0 auto;
+}
+a {
+    color: #00B7FF;
+    text-decoration: none;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+/***********************header****************************/
+/***********************main****************************/
+/***********************footer****************************/
+#footer{
+    padding-top: 60px;
+    background: none repeat scroll 0 0 #f2f5f8;
+    color: #939393;
+}
+.footerLinks:before {
+    content: "logo";
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: #999;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    line-height: 90px;
+}
+.footerColumn {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.footerColumn h4{
+    font-size: 18px;
+    line-height: 30px;
+    color: #323232;
+    font-weight: 700;
+
+}
+.footerColumn ul li{
+    display: block;
+    line-height: 24px;
+}
+.footerColumn ul li a{
+    color: #939393;
+}
+.copyRight{
+    border-top: 1px solid #e3e3e3;
+}
+.copyRight p{
+    text-align: center;
+    line-height: 60px;
+}
+
+
+
+
