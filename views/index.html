@@ -6,17 +6,61 @@
         <%=title %>
     </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+        .main {
+            width: 100%;
+            height: 100%;
+            background: none repeat scroll 0 0 #5cc1af;
+        }
+
+        .main .joinUs {
+            margin: 0 auto;
+            max-width: 966px;
+            height: 100%;
+            position: relative;
+        }
+
+        .joinUs h3 {
+            width: 100%;
+            position: absolute;
+            font-size: 60px;
+            top: 40%;
+            text-align: center;
+        }
+
+        .joinUs .more {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .joinUs .join,
+        .joinUs .learn {
+            color: #333;
+            display: inline-block;
+            width: 20%;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #e3e3e3;
+            border-radius: 10px;
+            margin-left: 40px;
+        }
+    </style>
 </head>
 
 <body>
     <header class="container">
-        <a href="/users">users</a>
-        <h1><%= title %></h1>
-        <p>Welcome to
-            <%=title %>
-        </p>
+
     </header>
-    <div class="main container"></div>
+    <div class="main">
+        <div class="joinUs">
+            <h3>we need you join us</h3>
+            <div class="more">
+                <a href="#gotojoinus" class="join">JOIN US</a><a href="#more" class="learn">Learn more</a>
+            </div>
+        </div>
+    </div>
 
     <% include footer.html %>
 </body>
