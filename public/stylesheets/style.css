@@ -131,27 +131,26 @@ a {
 
 /***********************header****************************/
 #headerNav{
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 2;
-    background: none repeat scroll 0 0 #0C182D
+   /* background: none repeat scroll 0 0 #0C182D*/
 }
 #headerNav .container{
-    width: 966px;
     margin: 0 auto;
     position: relative;
 }
 #headerNav .nav{
-    margin-left: 300px;
+    float: right;
+    margin-top: 30px;
 }
 #headerNav .nav:before{
-    content: "";
+    content: "Logo";
     display: inline-block;
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    background-color: red;
     position: absolute;
     left: 0px;
     top: 50%;
@@ -159,22 +158,33 @@ a {
 }
 #headerNav .nav li{
     display: inline-block;
-    width: 20%;
+    margin-left: 40px;
 }
 #headerNav .nav a{
-    color: #fff;
+    color: rgba(255, 255, 255, 0.5);
     display: block;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
+     padding: 0 20px;
+}
+#headerNav .nav .active{
+    color: rgba(255, 255, 255, 1);
+}
+#headerNav .nav a:hover{
+     color: rgba(255, 255, 255, 1);
+}
+#headerNav .nav .focus{
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
 }
 /***********************main****************************/
-.main {
+.main .home{
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-height: 350px;
     background: none repeat scroll 0 0 #5cc1af;
     min-height: 280px;
 }
@@ -192,6 +202,7 @@ a {
     font-size: 60px;
     top: 40%;
     text-align: center;
+    color: rgba(255,255,255, 1);
 }
 
 .joinUs .more {
@@ -203,7 +214,7 @@ a {
 
 .joinUs .join,
 .joinUs .learn {
-    color: #333;
+    color: rgba(255, 255, 255, 1);
     display: inline-block;
     width: 25%;
     height: 50px;
@@ -211,6 +222,29 @@ a {
     border: 1px solid #e3e3e3;
     border-radius: 25px;
     margin-left: 40px;
+}
+.main .work article{
+    margin: 20px 0;
+}
+.main .work .title{
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+.main .work .title:before,
+.main .work .title:after{
+    content: "";
+    display: inline-block;
+    border-top: 1px solid #47D5EF;
+    background: none repeat scroll 0 0 #47D5EF;
+    width: 10%;
+}
+.main .work .title:before{
+    float: left;
+}
+.main .work .title:after{
+    float: right;
 }
 /***********************footer****************************/
 #footer{
