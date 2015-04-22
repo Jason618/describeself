@@ -181,6 +181,49 @@ a {
     border-radius: 10px;
 }
 /***********************main****************************/
+
+@-webkit-keyframes 'backgroundMove' {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000% 0;
+    }
+}
+@-moz-keyframes 'backgroundMove' {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000% 0;
+    }
+}
+@-ms-keyframes 'backgroundMove' {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000% 0;
+    }
+}
+@-o-keyframes 'backgroundMove' {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000% 0;
+    }
+}
+
+
+.joinUsBg {
+    animation: 'backgroundMove' 100s linear  3s infinite normal;
+    -webkit-animation: 'backgroundMove' 100s linear  3s infinite normal;
+    -moz-animation: 'backgroundMove' 100s linear  3s infinite normal;
+    -ms-animation: 'backgroundMove' 100s linear  3s infinite normal;
+    -o-animation: 'backgroundMove' 100s linear  3s infinite normal;
+
+}
 .main .home{
     width: 100%;
     height: 100vh;
@@ -209,7 +252,7 @@ a {
 
 .joinUs .more {
     position: absolute;
-    bottom: 30px;
+    bottom: 10%;
     width: 100%;
     text-align: center;
     z-index: 2;
@@ -232,7 +275,7 @@ a {
     position: absolute;
     bottom: 0px;
     opacity: 0.1;
-    background: url('/images/logos-24.png') repeat-x scroll 0 0 transparent;
+    background: url('/images/logos-24-black.png') repeat-x scroll 0 0 transparent;
 }
 .main .work article{
     margin: 20px 0;
@@ -256,6 +299,31 @@ a {
 }
 .main .work .title:after{
     float: right;
+}
+article section{
+    position: relative;
+}
+article section p{
+    padding: 20px;
+    width: 50%;
+    line-height: 24px;
+    font-size: 16px;
+}
+article section .imgageWrapper{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 20px;
+    -webkit-shape-outside: circle();
+    -moz-shape-outside: circle();
+    -ms-shape-outside: circle();
+    -o-shape-outside: circle();
+    shape-outside: circle();
+}
+article section img{
+
 }
 /***********************footer****************************/
 #footer{
