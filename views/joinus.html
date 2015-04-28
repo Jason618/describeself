@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%=title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/global.css' />
+    <link rel='stylesheet' href='/stylesheets/joinus.css' />
+    <style>
+    </style>
+</head>
+
+<body>
+    <% include header.html %>
+        <div class="container joinus">
+            <div class="left">
+                <h1>Contact form</h1>
+                <p>please fill all the texts in the fileds</p>
+                <form action="api/addyou">
+                    <input type="hidden" name="test" />
+                    <fieldset>
+                        <label>username</label>
+                        <input type="text" name="username" value="" />
+                    </fieldset>
+                    <fieldset>
+                        <label>email</label>
+                        <input type="email" name="email" value="" />
+                    </fieldset>
+                    <fieldset>
+                        <label>phone</label>
+                        <input type="tel" name="phone" value="" />
+                    </fieldset>
+                    <fieldset>
+                        <label>qq</label>
+                        <input type="text" name="qq" value="" />
+                    </fieldset>
+                    <fieldset>
+                        <label>part time</label>
+                        <input type="text" name="time" value="" />
+                    </fieldset>
+                    <fieldset>
+                        <label>Message(suggestions)</label>
+                        <textarea name="suggestions"></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>Message(self-introduction)</label>
+                        <textarea name="introduction"></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>what's your good at</label>
+                        <div class="skills"></div>
+                        <input type="text" placeholder="add your skill" />
+                    </fieldset>
+                </form>
+            </div>
+            <div class="right"></div>
+        </div>
+        <% include footer.html %>
+
+</body>
+
+</html>

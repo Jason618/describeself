@@ -1,140 +1,10 @@
-/***********************reset****************************/
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-body {
-    line-height:1;
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
-}
-
-nav ul {
-    list-style:none;
-}
-
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-
-input, select {
-    vertical-align:middle;
-}
-
-/***********************global****************************/
-html, body{
-    height: 100%;
-}
-body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-.container{
-    max-width: 966px;
-    margin: 0 auto;
-}
-a {
-    color: #00B7FF;
-    text-decoration: none;
-}
-.clearfix{
-    zoom: 1;
-}
-.clearfix:after {
-    content: "";
-    display: block;
-    height: 0;
-    font-size: 0;
-    visibility: hidden;
-    clear: both;
-}
-
 /***********************header****************************/
 #headerNav{
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 2;
+    background: none;
    /* background: none repeat scroll 0 0 #0C182D*/
 }
 #headerNav .container{
@@ -144,6 +14,7 @@ a {
 #headerNav .nav{
     float: right;
     margin-top: 30px;
+    margin-bottom: 0px;
 }
 #headerNav .nav:before{
     content: "Logo";
@@ -182,7 +53,7 @@ a {
 }
 /***********************main****************************/
 
-@-webkit-keyframes 'backgroundMove' {
+@-webkit-keyframes backgroundMove {
     0% {
         background-position: 0 0;
     }
@@ -190,7 +61,7 @@ a {
         background-position: -1000% 0;
     }
 }
-@-moz-keyframes 'backgroundMove' {
+@-moz-keyframes backgroundMove {
     0% {
         background-position: 0 0;
     }
@@ -198,7 +69,7 @@ a {
         background-position: -1000% 0;
     }
 }
-@-ms-keyframes 'backgroundMove' {
+@-ms-keyframes backgroundMove {
     0% {
         background-position: 0 0;
     }
@@ -206,7 +77,7 @@ a {
         background-position: -1000% 0;
     }
 }
-@-o-keyframes 'backgroundMove' {
+@-o-keyframes backgroundMove {
     0% {
         background-position: 0 0;
     }
@@ -214,15 +85,21 @@ a {
         background-position: -1000% 0;
     }
 }
-
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000% 0;
+    }
+}
 
 .joinUsBg {
-    animation: 'backgroundMove' 100s linear  3s infinite normal;
-    -webkit-animation: 'backgroundMove' 100s linear  3s infinite normal;
-    -moz-animation: 'backgroundMove' 100s linear  3s infinite normal;
-    -ms-animation: 'backgroundMove' 100s linear  3s infinite normal;
-    -o-animation: 'backgroundMove' 100s linear  3s infinite normal;
-
+    -webkit-animation: backgroundMove 100s linear  3s infinite normal;
+    -moz-animation: backgroundMove 100s linear  3s infinite normal;
+    -ms-animation: backgroundMove 100s linear  3s infinite normal;
+    -o-animation: backgroundMove 100s linear  3s infinite normal;
+    animation: backgroundMove 100s linear  3s infinite normal;
 }
 .main .home{
     width: 100%;
@@ -300,8 +177,14 @@ a {
 .main .work .title:after{
     float: right;
 }
+article {
+    border-bottom: 1px solid #e3e3e3;
+}
+
 article section{
     position: relative;
+    overflow: hidden;
+
 }
 article section p{
     padding: 20px;
@@ -322,53 +205,21 @@ article section .imgageWrapper{
     -o-shape-outside: circle();
     shape-outside: circle();
 }
+article section:hover .we{
+    transform: translateY(10px);
+}
+article section .we{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    transform: translateY(30px);
+    transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
 article section img{
 
 }
-/***********************footer****************************/
-#footer{
-    padding-top: 60px;
-    background: none repeat scroll 0 0 #f2f5f8;
-    color: #939393;
-}
-.footerLinks:before {
-    content: "logo";
-    display: block;
-    width: 90px;
-    height: 90px;
-    background: #999;
-    margin: 0 auto;
-    text-align: center;
-    color: #fff;
-    line-height: 90px;
-}
-.footerColumn {
-    width: 25%;
-    float: left;
-    box-sizing: border-box;
-    padding: 20px;
-}
-.footerColumn h4{
-    font-size: 18px;
-    line-height: 30px;
-    color: #323232;
-    font-weight: 700;
 
-}
-.footerColumn ul li{
-    display: block;
-    line-height: 24px;
-}
-.footerColumn ul li a{
-    color: #939393;
-}
-.copyRight{
-    border-top: 1px solid #e3e3e3;
-}
-.copyRight p{
-    text-align: center;
-    line-height: 60px;
-}
 
 
 
