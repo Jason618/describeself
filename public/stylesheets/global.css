@@ -107,7 +107,8 @@ html, body{
     height: 100%;
 }
 body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-family:"Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 .container{
     max-width: 966px;
@@ -128,6 +129,53 @@ a {
     visibility: hidden;
     clear: both;
 }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius: 4px;
+    color: #555;
+    display: inline-block;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 4px 6px;
+    vertical-align: middle;
+}
+
+fieldset label,
+fiedlset input{
+    display: inline-block;
+    width: 50%;
+}
+fieldset label{
+    padding-right: 20px;
+    text-align: right;
+}
+.primaryButton{
+
+}
+.secondButton{
+
+}
+
 /***********************header****************************/
 #headerNav{
     width: 100%;
